@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizon</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <nav class="c-nav">
+        <svg class="c-nav__logo" width="104" height="18" viewBox="0 0 104 18" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M0 17.6161V0.429109H6.05189V6.24467C6.27018 5.42409 6.73687 4.76161 7.45196 4.25721C8.16705 3.75282 9.15311 3.50063 10.4102 3.50063C12.0812 3.50063 13.2931 3.83563 14.0458 4.50565C14.7985 5.17566 15.1749 6.13927 15.1749 7.39649V17.6161H9.123V9.64366C9.123 9.21455 9.01386 8.89837 8.79557 8.69511C8.57728 8.48432 8.23856 8.37892 7.77939 8.37892C7.19227 8.37892 6.75945 8.5069 6.48095 8.76286C6.20997 9.01882 6.07448 9.39147 6.07448 9.8808V17.6161H0Z" />
+            <path
+                d="M25.4609 3.29737C26.9964 3.29737 28.3739 3.45922 29.5933 3.78294C30.1277 3.91844 30.6471 4.15935 31.1515 4.50565C31.6633 4.84442 32.0999 5.28105 32.4612 5.81556C32.83 6.34253 33.1085 6.97867 33.2967 7.72397C33.4849 8.46926 33.579 9.33124 33.579 10.3099C33.579 11.5822 33.4247 12.734 33.1161 13.7654C32.8074 14.7892 32.3408 15.6098 31.716 16.2271C31.0988 16.8444 30.4025 17.2735 29.6272 17.5144C28.5734 17.8381 27.3464 18 25.9464 18C24.885 18 23.8801 17.9398 22.9317 17.8193C21.9833 17.6989 21.2004 17.473 20.5832 17.1418C19.966 16.803 19.424 16.3325 18.9573 15.7302C18.4982 15.1205 18.1745 14.5031 17.9863 13.8783C17.6551 12.8018 17.4895 11.6688 17.4895 10.4793C17.4895 9.40276 17.5799 8.47679 17.7605 7.70138C17.9487 6.91844 18.2121 6.28607 18.5509 5.80427C18.8896 5.32246 19.345 4.88959 19.9171 4.50565C20.4967 4.11418 21.1515 3.83187 21.8817 3.65872C22.9129 3.41782 24.106 3.29737 25.4609 3.29737ZM25.4044 13.7089C26.2926 13.7089 26.9211 13.5094 27.29 13.1104C27.6588 12.7039 27.8432 11.9511 27.8432 10.8519C27.8432 10.1593 27.7604 9.61732 27.5948 9.22585C27.4368 8.82685 27.1884 8.54078 26.8496 8.36763C26.5184 8.19448 26.1157 8.10791 25.6415 8.10791C25.1146 8.10791 24.663 8.20201 24.2866 8.39021C23.9178 8.57089 23.6506 8.83438 23.485 9.18068C23.3194 9.52698 23.2366 10.1104 23.2366 10.931C23.2366 11.9849 23.4097 12.7114 23.7559 13.1104C24.1097 13.5094 24.6592 13.7089 25.4044 13.7089Z" />
+            <path
+                d="M35.7807 17.6161V3.74906H41.4035V7.30615C41.7347 5.78545 42.0848 4.79925 42.4536 4.34755C42.9579 3.71518 43.7257 3.399 44.7569 3.399C45.0881 3.399 45.4043 3.41782 45.7054 3.45546V9.95985H45.3328C44.437 9.95985 43.7709 10.0314 43.3343 10.1744C43.0031 10.2873 42.7208 10.4831 42.4875 10.7616C42.3219 10.9498 42.1788 11.2396 42.0584 11.6311C41.938 12.0226 41.8778 12.4291 41.8778 12.8507V17.6161H35.7807Z" />
+            <path
+                d="M52.9654 2.84567H48.7652C48.4641 2.84567 48.242 2.8005 48.099 2.71016C48.0012 2.64241 47.9334 2.54454 47.8958 2.41656C47.8657 2.28105 47.8506 1.96487 47.8506 1.46801C47.8506 0.918444 47.877 0.57591 47.9296 0.440402C47.9899 0.297365 48.099 0.188206 48.2571 0.112923C48.4152 0.0376412 48.7162 0 49.1604 0H52.5589C53.1234 0 53.4735 0.0828105 53.6089 0.248432C53.752 0.406524 53.8235 0.752823 53.8235 1.28733C53.8235 1.867 53.7971 2.23965 53.7444 2.40527C53.7143 2.53325 53.6428 2.63112 53.5299 2.69887C53.3643 2.79674 53.1761 2.84567 52.9654 2.84567ZM53.8235 17.6161H47.7716V3.90715C48.02 3.99749 48.2684 4.05772 48.5168 4.08783C49.1039 4.14806 49.8867 4.17817 50.8653 4.17817C51.6105 4.17817 52.3067 4.14429 52.9541 4.07654C53.353 4.0389 53.6428 3.98243 53.8235 3.90715V17.6161Z" />
+            <path
+                d="M68.8629 17.6161H56.2849V13.9235L62.1222 8.7064H56.2849V3.74906H68.8629V8.22083L63.161 13.3363H68.8629V17.6161Z" />
+            <path
+                d="M78.5053 3.29737C80.0408 3.29737 81.4183 3.45922 82.6377 3.78294C83.1721 3.91844 83.6915 4.15935 84.1959 4.50565C84.7077 4.84442 85.1443 5.28105 85.5056 5.81556C85.8744 6.34253 86.1529 6.97867 86.3411 7.72397C86.5293 8.46926 86.6234 9.33124 86.6234 10.3099C86.6234 11.5822 86.4691 12.734 86.1605 13.7654C85.8518 14.7892 85.3852 15.6098 84.7604 16.2271C84.1432 16.8444 83.4469 17.2735 82.6716 17.5144C81.6178 17.8381 80.3908 18 78.9908 18C77.9294 18 76.9246 17.9398 75.9761 17.8193C75.0277 17.6989 74.2449 17.473 73.6276 17.1418C73.0104 16.803 72.4684 16.3325 72.0017 15.7302C71.5426 15.1205 71.2189 14.5031 71.0307 13.8783C70.6995 12.8018 70.5339 11.6688 70.5339 10.4793C70.5339 9.40276 70.6243 8.47679 70.8049 7.70138C70.9931 6.91844 71.2565 6.28607 71.5953 5.80427C71.934 5.32246 72.3894 4.88959 72.9615 4.50565C73.5411 4.11418 74.1959 3.83187 74.9261 3.65872C75.9573 3.41782 77.1504 3.29737 78.5053 3.29737ZM78.4488 13.7089C79.337 13.7089 79.9656 13.5094 80.3344 13.1104C80.7032 12.7039 80.8876 11.9511 80.8876 10.8519C80.8876 10.1593 80.8048 9.61732 80.6392 9.22585C80.4812 8.82685 80.2328 8.54078 79.894 8.36763C79.5628 8.19448 79.1601 8.10791 78.6859 8.10791C78.159 8.10791 77.7074 8.20201 77.331 8.39021C76.9622 8.57089 76.695 8.83438 76.5294 9.18068C76.3638 9.52698 76.281 10.1104 76.281 10.931C76.281 11.9849 76.4541 12.7114 76.8003 13.1104C77.1541 13.5094 77.7036 13.7089 78.4488 13.7089Z" />
+            <path
+                d="M88.8251 17.6161V3.74906H94.6286V7.26098C94.749 6.41029 95.0012 5.69134 95.3851 5.10414C95.769 4.50941 96.247 4.07277 96.819 3.79423C97.3986 3.51568 98.1927 3.37641 99.2014 3.37641C100.895 3.37641 102.167 3.74153 103.018 4.47177C103.673 5.02886 104 5.91343 104 7.12547V17.6161H98.061V9.93727C98.061 9.35759 97.9406 8.93977 97.6997 8.68382C97.4588 8.42785 97.0938 8.29988 96.6045 8.29988C96.1077 8.29988 95.6937 8.42785 95.3625 8.68382C95.0388 8.93977 94.877 9.35759 94.877 9.93727V17.6161H88.8251Z" />
+        </svg>
+        <ul class="c-nav__list">
+            <li class="c-nav__item"><a href="">Le Projet</a></li>
+            <li class="c-nav__item"><a href="">La Quête</a></li>
+            <li class="c-nav__item"><a href="">Journal de bord</a></li>
+            <li class="c-nav__item"><a href="" class="c-cta c-cta--light">Je participe</a></li>
+        </ul>
+    </nav>
+    <header class="c-header">
+        <h1 class="c-header__title fw--semi_bold">Hissez la grand’voile !<br>Cap vers notre quête</h1>
+        <p class="c-header__desc">Co-construisons ensemble un navire éco-conçu, paré pour la conquête du Vendée Globe et
+            d’un avenir meilleur.</p>
+        <a href="" class="c-cta c-cta--light">Je participe</a>
+    </header>
+    <div class="c-section">
+        <div class="c-section__content">
+            <h2 class="c-section__title fs--xl fw--semi_bold">Une amitié née de <span class="c--primary">valeurs
+                    fortes</span></h2>
+            <p class="c-section__desc">Guidés par cette même conviction, celle de la conquête d’un avenir meilleur et
+                durable, Armel Trippon et l’association « Les P’tits Doudous » se sont réunis autour d’un projet
+                engageant et sportif.</p>
+            <div class="c-values">
+                <div class="c-value">
+                    <div class="c-value__icon-container">
+                        <svg class="c-value__icon" width="24" height="24" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M21.224 15.5429L20.411 14.0789L18.663 15.0509L19.475 16.5119C19.523 16.5969 19.557 16.6849 19.579 16.7759C19.6157 16.9412 19.6109 17.113 19.565 17.2759C19.5407 17.3585 19.5057 17.4375 19.461 17.5109C19.3766 17.6555 19.2573 17.7765 19.114 17.8629C18.9589 17.955 18.7814 18.0025 18.601 17.9999H14V15.9999L9.99999 18.9999L14 21.9999V19.9999H18.601C18.879 19.9999 19.153 19.9629 19.412 19.8909C19.9123 19.7529 20.3673 19.4852 20.731 19.1149C20.909 18.9359 21.063 18.7349 21.187 18.5219C21.5816 17.855 21.7021 17.0609 21.523 16.3069C21.4569 16.0404 21.3564 15.7835 21.224 15.5429ZM5.86199 11.0389L3.55199 15.6589C3.43237 15.8981 3.34463 16.1519 3.29099 16.4139C3.19328 16.9046 3.21996 17.412 3.3686 17.8897C3.51725 18.3674 3.78313 18.8003 4.14199 19.1489C4.31999 19.3229 4.51799 19.4749 4.73699 19.6019C5.19353 19.8627 5.71021 19.9999 6.23599 19.9999H7.99999V17.9999H6.23599C6.06091 18.0004 5.88867 17.9556 5.73599 17.8699C5.59016 17.786 5.46854 17.6658 5.38299 17.5209C5.29519 17.3798 5.24398 17.2189 5.23399 17.0529C5.22917 16.9708 5.23522 16.8885 5.25199 16.8079C5.26999 16.7209 5.29999 16.6349 5.34099 16.5519L7.59699 12.0399L9.19599 12.9629L8.59799 7.99994L3.99999 9.96394L5.86199 11.0389ZM18.598 12.9639L19.196 7.99994L17.558 8.94494L14.715 3.82794C14.5165 3.46399 14.2436 3.14595 13.914 2.89456C13.5844 2.64317 13.2055 2.46407 12.802 2.36894C12.5489 2.3103 12.2897 2.28243 12.03 2.28594C11.5012 2.29585 10.9845 2.44522 10.532 2.71894C10.049 3.01211 9.65972 3.4371 9.40999 3.94394L8.67799 5.40794L10.467 6.30294L11.199 4.83794C11.244 4.74794 11.3 4.66694 11.365 4.59594C11.4842 4.46587 11.6378 4.37225 11.808 4.32594C11.9808 4.27713 12.1633 4.27335 12.338 4.31494C12.4715 4.34627 12.5967 4.40575 12.7054 4.48939C12.814 4.57303 12.9036 4.67891 12.968 4.79994L15.826 9.94594L14 10.9999L18.598 12.9639Z" />
+                        </svg>
+                    </div>
+                    <h3 class="c-value__title">Recyclage</h3>
+                    <p class="c-value__desc">Donner une seconde vie aux matériaux via une économie circulaire.</p>
+                </div>
+                <div class="c-value">
+                    <div class="c-value__icon-container">
+                        <svg class="c-value__icon" width="24" height="24" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M8 12.0002C10.28 12.0002 12 10.2802 12 8.00023C12 5.72023 10.28 4.00023 8 4.00023C5.72 4.00023 4 5.72023 4 8.00023C4 10.2802 5.72 12.0002 8 12.0002ZM8 6.00023C9.178 6.00023 10 6.82223 10 8.00023C10 9.17823 9.178 10.0002 8 10.0002C6.822 10.0002 6 9.17823 6 8.00023C6 6.82223 6.822 6.00023 8 6.00023ZM9 13.0002H7C4.243 13.0002 2 15.2432 2 18.0002V19.0002H4V18.0002C4 16.3462 5.346 15.0002 7 15.0002H9C10.654 15.0002 12 16.3462 12 18.0002V19.0002H14V18.0002C14 15.2432 11.757 13.0002 9 13.0002ZM18.364 2.63623L16.95 4.05023C18.271 5.37323 19 7.13123 19 9.00023C19 10.8692 18.271 12.6272 16.95 13.9502L18.364 15.3642C20.064 13.6632 21 11.4032 21 9.00023C21 6.59723 20.064 4.33723 18.364 2.63623Z" />
+                            <path
+                                d="M15.535 5.46387L14.121 6.87987C14.688 7.44487 15 8.19787 15 8.99987C15 9.80187 14.688 10.5549 14.121 11.1199L15.535 12.5359C16.479 11.5919 17 10.3369 17 8.99987C17 7.66287 16.479 6.40787 15.535 5.46387Z" />
+                        </svg>
+                    </div>
+                    <h3 class="c-value__title">Nouvelle vision</h3>
+                    <p class="c-value__desc">Améliorer le quotidien de chacun par des missions à impact.</p>
+                </div>
+            </div>
+            <a href="" class="c-cta c-cta--dark">Je découvre leur histoire</a>
+        </div>
+        <div class="c-section__illu">
+            <img src="./assets/img/armel_nolwenn.jpg" alt="">
+        </div>
+    </div>
+    <div class="c-section">
+        <div class="c-section__illu">
+            <img src="./assets/img/iphone_mockup.png" alt="">
+        </div>
+        <div class="c-section__content">
+            <h2 class="c-section__title fs--xl fw--semi_bold">En quête d’un <span class="c--primary">navire
+                    meilleur</span></h2>
+            <p class="c-section__desc">L’esprit aventureux et révolutionnaire, nous partons à l’abordage de la mythique
+                course du Vendée Globe. Investis au quotidien dans une démarche d’éco-conception, nous souhaitons
+                construire notre nouveau navire à base de matériaux recyclés.</p>
+            <p class="c-section__desc">Ainsi, nous sommes à la recherche d’un trésor précieux à nos yeux, tel que le
+                carbone et le titane, pour concevoir les pièces de notre bateau. Chers matelots et moussaillons,
+                intégrez notre équipage pour nous accompagner dans cette quête.</p>
+            <div class="c-values">
+                <div class="c-value">
+                    <div class="c-value__icon-container">
+                        <svg class="c-value__icon" width="24" height="24" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M21.88 2.1499L20.68 2.5499C18.6234 3.26445 16.4273 3.48372 14.27 3.1899C12.0031 2.83811 9.68292 3.15072 7.59 4.0899C6.48048 4.56235 5.50675 5.30482 4.75747 6.24971C4.00819 7.19461 3.50716 8.31191 3.3 9.4999C3.08926 10.6424 3.11082 11.8155 3.36338 12.9495C3.61594 14.0834 4.09433 15.1549 4.77 16.0999C4.71 16.3099 4.65 16.5199 4.6 16.7299C4.19384 18.4569 3.99245 20.2258 4 21.9999H6C6.094 20.5477 6.29116 19.1041 6.59 17.6799C7.97743 18.4291 9.53335 18.8112 11.11 18.7899C12.5805 18.7889 14.0358 18.4931 15.39 17.9199C23 14.6699 22 3.8599 22 3.4099L21.88 2.1499ZM14.61 16.0799C12 17.1899 8.88 16.9999 7.13 15.6299C7.42576 14.6409 7.83164 13.6883 8.34 12.7899C8.73519 12.1433 9.20142 11.5429 9.73 10.9999C10.2701 10.4511 10.8784 9.97386 11.54 9.5799C12.9071 8.76245 14.4232 8.22535 16 7.9999V6.9999C14.1858 6.9371 12.3827 7.30731 10.74 8.0799C9.06042 8.89945 7.63602 10.1614 6.62 11.7299C6.24317 12.329 5.90901 12.9539 5.62 13.5999C5.15652 12.4143 5.02514 11.1247 5.24 9.8699C5.38077 8.99144 5.7429 8.16328 6.29225 7.46347C6.8416 6.76366 7.56008 6.21524 8.38 5.8699C9.57561 5.31106 10.8802 5.02418 12.2 5.0299C12.82 5.0299 13.43 5.0899 14.07 5.1399C16.0743 5.3985 18.1093 5.2798 20.07 4.7899C20 7.5499 19.5 13.9999 14.61 16.0799Z" />
+                        </svg>
+                    </div>
+                    <h3 class="c-value__title">Eco-conception</h3>
+                    <p class="c-value__desc">Réduction du bilan carbone de moitié.</p>
+                </div>
+                <div class="c-value">
+                    <div class="c-value__icon-container">
+                        <svg class="c-value__icon" width="24" height="24" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17.813 3.838C17.6282 3.57906 17.3843 3.36796 17.1015 3.22221C16.8187 3.07647 16.5052 3.00029 16.187 3H7.81304C7.16904 3 6.56104 3.313 6.14604 3.899L2.14604 10.48C2.03427 10.6636 1.9847 10.8784 2.0047 11.0924C2.0247 11.3064 2.11319 11.5083 2.25704 11.668L11.257 21.668C11.3503 21.7729 11.4647 21.8568 11.5927 21.9143C11.7207 21.9718 11.8595 22.0016 11.9998 22.0017C12.1402 22.0018 12.2789 21.9722 12.407 21.9149C12.5351 21.8575 12.6496 21.7737 12.743 21.669L21.743 11.669C21.8872 11.5094 21.9759 11.3075 21.9959 11.0934C22.0159 10.8793 21.9661 10.6645 21.854 10.481L17.813 3.838ZM12 19.505L5.24504 12H18.754L12 19.505ZM4.77704 10L7.81304 5L16.145 4.938L19.222 10H4.77704Z" />
+                        </svg>
+                    </div>
+                    <h3 class="c-value__title">Matériaux</h3>
+                    <p class="c-value__desc">Récolter 100 000 kg de carbone et de titane.</p>
+                </div>
+            </div>
+            <a href="" class="c-cta c-cta--dark">Je rejoins la quête</a>
+        </div>
+    </div>
+    <div class="c-slider">
+        <h2 class="c-slider__title fs--xl fw--semi_bold">La carte de notre <span class="c--primary">épopée</span></h2>
+        <p class="c-slider__desc">Suivez les étapes de notre quête, là où votre participation nous sera précieuse.</p>
+        <div class="c-slider__cards">
+            <div class="c-cards">
+                <div class="c-card" style="background-image: url('./assets/img/cards/bg_lancement.jpg');">
+                    <p class="c-card__date">Juin 2022</p>
+                    <div class="c-card__banner">
+                        <h3 class="c-card__title"><span class="c-card_step">1.</span>Lancement</h3>
+                        <p class="c-card__desc">Début de l’aventure lancée par Armel Tripon</p>
+                        <div class="c-card__arrows">
+                            <svg class="c-card__arrow c-card__arrow--left" width="32" height="32" viewBox="0 0 32 32"
+                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.666 23L6.33301 16L13.666 9M6.66601 16H25.666" stroke="white"
+                                    stroke-opacity="0.8" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <svg class="c-card__arrow c-card__arrow--right" width="32" height="32" viewBox="0 0 32 32"
+                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.666 23L6.33301 16L13.666 9M6.66601 16H25.666" stroke="white"
+                                    stroke-opacity="0.8" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="c-card c-card--active"
+                    style="background-image: url('./assets/img/cards/bg_chasse_tresor.jpg');">
+                    <p class="c-card__date">Juillet 2022</p>
+                    <div class="c-card__banner">
+                        <h3 class="c-card__title"><span class="c-card_step">2.</span>Chasse aux trésors</h3>
+                        <p class="c-card__desc">Collecte de carbone et de titane</p>
+                        <div class="c-card__arrows">
+                            <svg class="c-card__arrow c-card__arrow--left" width="32" height="32" viewBox="0 0 32 32"
+                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.666 23L6.33301 16L13.666 9M6.66601 16H25.666" stroke="white"
+                                    stroke-opacity="0.8" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <svg class="c-card__arrow c-card__arrow--right" width="32" height="32" viewBox="0 0 32 32"
+                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.666 23L6.33301 16L13.666 9M6.66601 16H25.666" stroke="white"
+                                    stroke-opacity="0.8" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="c-card" style="background-image: url('./assets/img/cards/bg_construction.jpg');">
+                    <p class="c-card__date">Octobre 2022</p>
+                    <div class="c-card__banner">
+                        <h3 class="c-card__title"><span class="c-card_step">3.</span>Contruction</h3>
+                        <p class="c-card__desc">Réalisation des pièces de l’IMOCA</p>
+                        <div class="c-card__arrows">
+                            <svg class="c-card__arrow c-card__arrow--left" width="32" height="32" viewBox="0 0 32 32"
+                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.666 23L6.33301 16L13.666 9M6.66601 16H25.666" stroke="white"
+                                    stroke-opacity="0.8" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <svg class="c-card__arrow c-card__arrow--right" width="32" height="32" viewBox="0 0 32 32"
+                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.666 23L6.33301 16L13.666 9M6.66601 16H25.666" stroke="white"
+                                    stroke-opacity="0.8" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="c-section">
+        <div class="c-section__content">
+            <h2 class="c-section__title fs--xl fw--semi_bold">Admirons notre <span class="c--primary">trésor</span>
+            </h2>
+            <p class="c-section__desc">Grâce à nos engagements, notre trésor s’enrichit de jour en jour. Merci pour
+                toutes vos actions contribuant pleinement à la réussite de notre quête. Au-delà de l’aspect matériel,
+                vous participez à l’amélioration du quotidien de chacun.</p>
+            <div class="c-values">
+                <div class="c-value">
+                    <div class="c-value__icon-container">
+                        <svg class="c-value__icon" width="24" height="24" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10 18C11.775 17.9996 13.4988 17.4054 14.897 16.312L19.293 20.708L20.707 19.294L16.311 14.898C17.405 13.4997 17.9996 11.7754 18 10C18 5.589 14.411 2 10 2C5.589 2 2 5.589 2 10C2 14.411 5.589 18 10 18ZM10 4C13.309 4 16 6.691 16 10C16 13.309 13.309 16 10 16C6.691 16 4 13.309 4 10C4 6.691 6.691 4 10 4Z" />
+                        </svg>
+                    </div>
+                    <h3 class="c-value__title">Objectif</h3>
+                    <p class="c-value__desc">Partir en quête du Vendée Globe 2024.</p>
+                </div>
+                <div class="c-value">
+                    <div class="c-value__icon-container">
+                        <svg class="c-value__icon" width="24" height="24" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M3 6V20C3 20.5304 3.21071 21.0391 3.58579 21.4142C3.96086 21.7893 4.46957 22 5 22H19C19.5304 22 20.0391 21.7893 20.4142 21.4142C20.7893 21.0391 21 20.5304 21 20V6C21 5.46957 20.7893 4.96086 20.4142 4.58579C20.0391 4.21071 19.5304 4 19 4H17V2H15V4H9V2H7V4H5C4.46957 4 3.96086 4.21071 3.58579 4.58579C3.21071 4.96086 3 5.46957 3 6ZM19 20H5V8H19V20Z" />
+                        </svg>
+                    </div>
+                    <h3 class="c-value__title">Date</h3>
+                    <p class="c-value__desc">Construction de l’IMOCA à partir d’Octobre 2022.</p>
+                </div>
+            </div>
+            <div class="c-section__progressbar">
+
+            </div>
+            <a href="" class="c-cta c-cta--dark">Je souhaite participer</a>
+        </div>
+        <div class="c-section__illu">
+            <img src="./assets/img/imoca_progress.png" alt="">
+        </div>
+    </div>
+    <div class="c-slider">
+        <h2 class="c-slider__title fs--xl fw--semi_bold">Ohé, ohé <span class="c--primary">matelots</span></h2>
+        <p class="c-slider__desc">Retrouvez nos derniers récits dans le journal de bord de notre projet.</p>
+    </div>
+    <footer>
+
+    </footer>
+</body>
+
+</html>
