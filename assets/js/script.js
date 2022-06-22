@@ -23,19 +23,58 @@ let translateX = 475 //initial value of sliderContainer translateX
 const slideToLeft = () => {
   const activeCard = [...slider].filter(card => card.classList.contains('c-card--active'))
   const activeID = (activeCard[0].id.split('_')[1])
-  if(activeID-2 >= 0 )
-  activeCard[0].classList.remove('c-card--active')
-  slider[activeID-2].classList.add('c-card--active')
-  translateX += (slider[activeID-1].clientWidth)
-  sliderContainer[0].style.transform = `translateX(${translateX}px)`
+  if(activeID-2 >= 0 ){
+    activeCard[0].classList.remove('c-card--active')
+    slider[activeID-2].classList.add('c-card--active')
+    translateX += (slider[activeID-1].clientWidth)
+    sliderContainer[0].style.transform = `translateX(${translateX}px)`
+  }
 }
 
 const slideToRight = () => {
   const activeCard = [...slider].filter(card => card.classList.contains('c-card--active'))
   const activeID =  (activeCard[0].id.split('_')[1])
-  if (activeID < slider.length)
-  activeCard[0].classList.remove('c-card--active')
-  slider[activeID].classList.add('c-card--active') 
-  translateX -= (slider[activeID-1].clientWidth)
-  sliderContainer[0].style.transform = `translateX(${translateX}px)`
+  if (activeID < slider.length){
+    activeCard[0].classList.remove('c-card--active')
+    slider[activeID].classList.add('c-card--active') 
+    translateX -= (slider[activeID-1].clientWidth)
+    sliderContainer[0].style.transform = `translateX(${translateX}px)`
+  }
 }
+
+// Slider drag and drop
+
+
+let isDown = false
+let startX
+let scrollLeft
+
+const drag = (e) => {
+  isDown = true
+  startX = e.pageX 
+}
+
+const drop = (e) => {
+  isDown = false
+  sliderContainer[0].classList.remove('active')
+}
+
+const move = (e) => {
+  if(!isDown) return
+  e.preventDefault()
+  const x = e.pageX || e.touches[0].pageX - sliderContainer[0].offsetLeft
+  const dist = (startX - x)
+  dist > 0 ? slideToRight() : slideToLeft()
+}
+
+(() => {
+	sliderContainer[0]?.addEventListener('mousedown', drag, false)
+	sliderContainer[0]?.addEventListener('touchstart', drag, false)
+
+  sliderContainer[0].addEventListener('mouseup', move, false)
+	sliderContainer[0].addEventListener('touchup', move)
+
+	sliderContainer[0].addEventListener('mouseleave', drop)
+	sliderContainer[0].addEventListener('mouseup', drop)
+	sliderContainer[0].addEventListener('touchend', drop)
+})()
