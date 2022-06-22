@@ -1,3 +1,9 @@
+// Dark Mode
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+  document.documentElement.classList.add('dark')
+}
+
+
 // Nav bar
 const nav = document.getElementsByClassName('c-nav')
 const cta = document.getElementsByClassName('c-cta')
@@ -13,7 +19,6 @@ window.onscroll = () => {
     cta[0].classList.add('c-cta--light')
   }
 }
-
 
 //Slider
 const slider = document.getElementsByClassName('c-card')
@@ -44,7 +49,6 @@ const slideToRight = () => {
 
 // Slider drag and drop
 
-
 let isDown = false
 let startX
 let scrollLeft
@@ -52,11 +56,13 @@ let scrollLeft
 const drag = (e) => {
   isDown = true
   startX = e.pageX 
+  sliderContainer[0].classList.add('c-cards--active')
 }
 
 const drop = (e) => {
+  startX = 0
   isDown = false
-  sliderContainer[0].classList.remove('active')
+  sliderContainer[0].classList.remove('c-cards--active')
 }
 
 const move = (e) => {
@@ -64,17 +70,17 @@ const move = (e) => {
   e.preventDefault()
   const x = e.pageX || e.touches[0].pageX - sliderContainer[0].offsetLeft
   const dist = (startX - x)
-  dist > 0 ? slideToRight() : slideToLeft()
+  dist > 0 ? slideToRight() : null
+  dist < 0 ? slideToLeft() : null
 }
 
 (() => {
-	sliderContainer[0]?.addEventListener('mousedown', drag, false)
-	sliderContainer[0]?.addEventListener('touchstart', drag, false)
+	sliderContainer[0].addEventListener('mousedown', drag, false)
+	sliderContainer[0].addEventListener('touchstart', drag, false)
 
   sliderContainer[0].addEventListener('mouseup', move, false)
-	sliderContainer[0].addEventListener('touchup', move)
+	sliderContainer[0].addEventListener('touchend', move)
 
-	sliderContainer[0].addEventListener('mouseleave', drop)
 	sliderContainer[0].addEventListener('mouseup', drop)
 	sliderContainer[0].addEventListener('touchend', drop)
 })()
