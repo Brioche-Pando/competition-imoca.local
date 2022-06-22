@@ -350,7 +350,7 @@ h1, h2, h3, h4, h5, h6, p, blockquote {
     position: relative;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
-    background: linear-gradient(-45deg, #fff 2.5%, #31A597 2.5%, #31A597 47.5%, #fff 47.5%, #fff 52.5%, #31A597 52.5%, #31A597 97.5%, #fff 97.5%);
+    background: linear-gradient(-45deg, #fff 2.5%, var(--c-primary) 2.5%, var(--c-primary) 47.5%, #fff 47.5%, #fff 52.5%, var(--c-primary) 52.5%, var(--c-primary) 97.5%, #fff 97.5%);
     background-size: 20px 20px;
     background-position: center left;
 }
@@ -399,6 +399,7 @@ h1, h2, h3, h4, h5, h6, p, blockquote {
     padding: 24px;
     display: flex;
     flex-direction: column;
+    row-gap: 5px;
     position: absolute;
     right: 0;
     bottom: -30%;
@@ -406,9 +407,17 @@ h1, h2, h3, h4, h5, h6, p, blockquote {
     background-color: var(--c-dark);
 }
 
+.c-popup__subtitle {
+    font-size: var(--fs-xs);
+}
+
+.c-popup__title {
+    font-size: var(--fs-l);
+}
+
 .c-popup__progressbar {
     width: 100%;
-    margin: 50px 0 45px;
+    margin: 45px 0 30px;
     display: flex;
     flex-direction: column;
 }
@@ -435,7 +444,7 @@ h1, h2, h3, h4, h5, h6, p, blockquote {
     position: relative;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
-    background: linear-gradient(-45deg, #fff 2.5%, #31A597 2.5%, #31A597 47.5%, #fff 47.5%, #fff 52.5%, #31A597 52.5%, #31A597 97.5%, #fff 97.5%);
+    background: linear-gradient(-45deg, #fff 2.5%, var(--c-primary) 2.5%, var(--c-primary) 47.5%, #fff 47.5%, #fff 52.5%, var(--c-primary) 52.5%, var(--c-primary) 97.5%, #fff 97.5%);
     background-size: 20px 20px;
     background-position: center left;
 }
@@ -459,14 +468,14 @@ h1, h2, h3, h4, h5, h6, p, blockquote {
 
 .c-popup__container p {
     min-width: max-content;
-    color: var(--c-grey);
+    color: var(--c-light);
     font-size: var(--fs-xs);
     line-height: 1.15;
 }
 
 .c-popup__jauge-end p {
     position: absolute;
-    bottom: -40px;
+    bottom: -25px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -679,7 +688,7 @@ h1, h2, h3, h4, h5, h6, p, blockquote {
 ---------------- */
 
 .bg--gradient-primary {
-    background: linear-gradient(90deg, #31A597 52.48%, #47DBC5 100%);
+    background: linear-gradient(90deg, var(--c-primary) 52.48%, #47DBC5 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
