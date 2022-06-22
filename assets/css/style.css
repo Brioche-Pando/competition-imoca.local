@@ -71,15 +71,6 @@ h1, h2, h3, h4, h5, h6, p, blockquote {
 }
 
 /* --------------------------------------------------------------------------------------------
-                                        LAYOUT
--------------------------------------------------------------------------------------------- */
-
-.l-body {
-    display: grid;
-
-}
-
-/* --------------------------------------------------------------------------------------------
                                         COMPONENT
 -------------------------------------------------------------------------------------------- */
 
@@ -88,6 +79,7 @@ h1, h2, h3, h4, h5, h6, p, blockquote {
 ---------------- */
 
 .c-cta {
+    height: fit-content;
     padding: 12px 20px;
     display: inline-block;
     border-radius: 8px;
@@ -151,8 +143,6 @@ h1, h2, h3, h4, h5, h6, p, blockquote {
     color: var(--c-dark);
 }
 
-.c-nav--scrolled .c-cta {}
-
 /* ----------------
       HEADER
 ---------------- */
@@ -200,6 +190,10 @@ h1, h2, h3, h4, h5, h6, p, blockquote {
 
 .c-section__desc {
     margin-top: 24px;
+}
+
+.c-section__illu>img {
+    border-radius: 8px;
 }
 
 .c-section__progressbar {}
@@ -325,6 +319,201 @@ h1, h2, h3, h4, h5, h6, p, blockquote {
     fill: var(--c-primary);
 }
 
+/* ----------------
+     ARTICLES
+---------------- */
+
+.c-articles {
+    width: calc(100% - var(--site-padding) * 2);
+    padding: 120px 0;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 24px;
+}
+
+.c-articles-container {
+    margin-top: 64px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+
+/* ----------------
+     ARTICLE
+---------------- */
+
+.c-article__img {
+    margin-bottom: 24px;
+    border-radius: 8px;
+}
+
+.c-article__title {
+    color: var(--c-dark);
+}
+
+.c-article__desc {
+    margin: 16px 0;
+}
+
+.c-article__cta {
+    text-decoration: underline !important;
+}
+
+/* ----------------
+   PARTICIPATION
+---------------- */
+
+.c-participation {
+    width: calc(100% - var(--site-padding) * 2);
+    padding: 120px 0;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 24px;
+}
+
+.c-participation__partnerships {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.c-partner {
+    width: 200px;
+    height: 120px;
+    padding: 32px 32px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 8px;
+    background-color: #E5E7EB;
+    color: var(--c-grey);
+}
+
+.c-partner--small-padding {
+    padding: 16px 32px;
+}
+
+/* ----------------
+        GAME
+---------------- */
+
+.c-games {
+    margin-top: 96px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.c-game {
+    width: 100%;
+    height: max(80vh, 700px);
+    padding-top: 40px;
+    display: grid;
+    align-items: start;
+    justify-items: center;
+    border-radius: 8px;
+}
+
+.c-game--green {
+    background-color: #F0FFFF;
+}
+
+.c-game--light {
+    background-color: #F8FAFC;
+}
+
+.c-game__title {
+    color: var(--c-dark);
+    font-size: calc(var(--fs-l) * 2);
+    line-height: 1.2;
+    text-align: center;
+}
+
+.c-game__bonus {
+    display: flex;
+    gap: 24px;
+}
+
+.c-game__bonus-item {
+    display: flex;
+    align-items: flex-end;
+}
+
+.c-game__img {
+    align-self: flex-end;
+}
+
+/* ----------------
+      FOOTER
+---------------- */
+
+.c-footer {
+    width: calc(100% - var(--site-padding) * 2);
+    padding: 120px 0;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 64px;
+}
+
+.c-footer__desc {
+    max-width: 35ch;
+    margin-top: 24px;
+}
+
+.c-footer__pages {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.c-footer__page-bloc {
+    width: 200px;
+    color: var(--c-dark);
+}
+
+.c-footer__page-desc {
+    margin-top: 8px;
+    color: var(--c-grey);
+}
+
+.c-footer__banner {
+    padding-top: 36px;
+    display: flex;
+    justify-content: space-between;
+    border-top: solid 1px var(--c-grey);
+}
+
+:is(.c-footer__banner-rs, .c-footer__banner-cgu) {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: var(--c-dark);
+}
+
+.c-footer__banner-cgu {
+    gap: 24px;
+}
+
+.c-footer__rs {
+    width: 36px;
+    height: 36px;
+}
+
+.c-footer__copyright {
+    color: var(--c-grey);
+}
+
 /* --------------------------------------------------------------------------------------------
                                         UTILITIES
 -------------------------------------------------------------------------------------------- */
@@ -333,8 +522,20 @@ h1, h2, h3, h4, h5, h6, p, blockquote {
       COLOR
 ---------------- */
 
+.bg--gradient-primary {
+    background: linear-gradient(90deg, #31A597 52.48%, #47DBC5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
 .c--primary {
-    color: var(--c-primary);
+    color: var(--c-primary) !important;
+}
+
+.c--dark {
+    color: var(--c-dark);
 }
 
 /* ----------------
