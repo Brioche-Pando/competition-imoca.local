@@ -140,6 +140,7 @@ h1, h2, h3, h4, h5, h6, p, blockquote {
 
 .c-nav--scrolled {
     background-color: rgba(255, 255, 255, .8);
+    z-index: 1;
 }
 
 .c-nav--scrolled .c-nav__logo {
@@ -245,7 +246,8 @@ h1, h2, h3, h4, h5, h6, p, blockquote {
     display: flex;
     align-items: center;
     column-gap: 16px;
-    transform: translateX(-475px);
+    transition: all 1.5s;
+    transform: translateX(475px);
 }
 
 .c-card {
@@ -289,6 +291,9 @@ h1, h2, h3, h4, h5, h6, p, blockquote {
     column-gap: 6px;
 }
 
+.c-card__arrows > svg {
+    cursor: pointer;
+}
 .c-card__arrow--right {
     transform: rotate(180deg);
 }
