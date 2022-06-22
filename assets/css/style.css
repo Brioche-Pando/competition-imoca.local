@@ -285,9 +285,10 @@ h1, h2, h3, h4, h5, h6, p, blockquote {
     column-gap: 6px;
 }
 
-.c-card__arrows > svg {
+.c-card__arrows>svg {
     cursor: pointer;
 }
+
 .c-card__arrow--right {
     transform: rotate(180deg);
 }
@@ -322,6 +323,156 @@ h1, h2, h3, h4, h5, h6, p, blockquote {
 
 .c-value__icon-container svg {
     fill: var(--c-primary);
+}
+
+/* ----------------
+    PROGRESSBAR
+---------------- */
+
+.c-progressbar {
+    width: 100%;
+    margin: 75px 0 45px;
+    display: flex;
+    flex-direction: column;
+}
+
+.c-progressbar__container {
+    width: 100%;
+    height: 10px;
+    border-radius: 15px;
+    background-color: #ececec;
+    text-align: end;
+}
+
+.c-progressbar__jauge {
+    width: 43%;
+    height: 100%;
+    position: relative;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    background: linear-gradient(-45deg, #fff 2.5%, #31A597 2.5%, #31A597 47.5%, #fff 47.5%, #fff 52.5%, #31A597 52.5%, #31A597 97.5%, #fff 97.5%);
+    background-size: 20px 20px;
+    background-position: center left;
+}
+
+.c-progressbar__jauge-end {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: calc(50% - 12px);
+    right: -7px;
+    transform: translateY(-50%);
+}
+
+.c-progressbar__jauge-end span {
+    width: 2px;
+    height: 32px;
+    margin-top: 5px;
+    background-color: var(--c-grey);
+}
+
+.c-progressbar__container p {
+    min-width: max-content;
+    color: var(--c-grey);
+    font-size: var(--fs-xs);
+    line-height: 1.15;
+}
+
+.c-progressbar__jauge-end p {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.c-progressbar__objectif {
+    margin-top: 20px;
+}
+
+/* ----------------
+     ARTICLES
+---------------- */
+
+.c-popup {
+    width: 300px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    bottom: -30%;
+    border-radius: 8px;
+    background-color: var(--c-dark);
+}
+
+.c-popup__progressbar {
+    width: 100%;
+    margin: 50px 0 45px;
+    display: flex;
+    flex-direction: column;
+}
+
+.c-popup__container {
+    width: 100%;
+    height: 10px;
+    border-radius: 15px;
+    background-color: #ececec;
+    text-align: end;
+}
+
+.c-popup__title {
+    color: var(--c-light);
+}
+
+.c-popup__desc {
+    font-size: var(--fs-xs);
+}
+
+.c-popup__jauge {
+    width: 25%;
+    height: 100%;
+    position: relative;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    background: linear-gradient(-45deg, #fff 2.5%, #31A597 2.5%, #31A597 47.5%, #fff 47.5%, #fff 52.5%, #31A597 52.5%, #31A597 97.5%, #fff 97.5%);
+    background-size: 20px 20px;
+    background-position: center left;
+}
+
+.c-popup__jauge-end {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: calc(50% - 12px);
+    right: -7px;
+    transform: translateY(-50%);
+}
+
+.c-popup__jauge-end span {
+    width: 2px;
+    height: 32px;
+    margin-top: 5px;
+    background-color: var(--c-grey);
+}
+
+.c-popup__container p {
+    min-width: max-content;
+    color: var(--c-grey);
+    font-size: var(--fs-xs);
+    line-height: 1.15;
+}
+
+.c-popup__jauge-end p {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.c-popup__objectif {
+    margin-top: 20px;
 }
 
 /* ----------------
@@ -565,4 +716,12 @@ h1, h2, h3, h4, h5, h6, p, blockquote {
 
 .fw--semi_bold {
     font-weight: var(--fw-semi_bold);
+}
+
+/* ----------------
+     RELATIVE
+---------------- */
+
+.p--relative {
+    position: relative;
 }
