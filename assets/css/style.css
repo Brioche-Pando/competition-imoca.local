@@ -16,7 +16,11 @@
     --c-secondary: #3F2700;
     --c-dark: #0F172A;
     --c-light: #FFFFFF;
-    --c-grey: #64748B;
+    --c-grey: #64748b;
+    --c-nav_bg: rgba(255, 255, 255, .8);
+    --c-shadow: rgba(17, 24, 39, 0.2);
+    --c-game_green: #F0FFFF;
+    --c-game_light: #F8FAFC;
 
     /* Font family */
     --ff-inter: 'Inter', sans-serif;
