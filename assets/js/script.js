@@ -1,5 +1,11 @@
 // Dark Mode
+const toggle = document.getElementById('checkbox-toggle')
+const switchTheme = () => {
+  document.documentElement.classList.toggle('dark')
+}
+
 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+  toggle.checked = true
   document.documentElement.classList.add('dark')
 }
 
@@ -75,6 +81,7 @@ const move = (e) => {
 }
 
 (() => {
+  toggle.addEventListener('change', switchTheme)
 	sliderContainer[0].addEventListener('mousedown', drag, false)
 	sliderContainer[0].addEventListener('touchstart', drag, false)
 
