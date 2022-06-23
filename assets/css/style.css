@@ -757,3 +757,204 @@ h1, h2, h3, h4, h5, h6, p, blockquote {
 .p--relative {
     position: relative;
 }
+
+
+/*___________________________________*/
+
+
+.switch {
+	 position: absolute;
+	 top: 30%;
+	 width: 60px;
+	 height: 30px;
+}
+ .switch input {
+	 display: none;
+}
+ .switch .wave {
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 border-radius: 40px;
+	 width: 60px;
+	 height: 30px;
+	 display: none;
+}
+ .switch .wave:after {
+	 content: "";
+	 width: 40px;
+	 height: 3px;
+	 border-radius: 100%;
+	 background: #fff;
+	 position: absolute;
+	 top: 7px;
+	 left: 10%;
+	 opacity: 0.4;
+}
+ .switch .wave:before {
+	 content: "";
+	 width: 35px;
+	 height: 2px;
+	 border-radius: 100%;
+	 background: #fff;
+	 position: absolute;
+	 top: 15px;
+	 left: 30%;
+	 opacity: 0.3;
+}
+ .switch .slider {
+	 position: absolute;
+	 cursor: pointer;
+	 top: 0;
+	 left: 0;
+	 right: 0;
+	 bottom: 0;
+	 background-color: #47dbc5;
+	 transition: all 1.4s;
+	 border-radius: 50px;
+	 z-index: 100;
+	 overflow: hidden;
+}
+ .switch .slider:before, .switch .slider:after {
+	 position: absolute;
+	 content: "";
+	 height: 20px;
+	 width: 20px;
+	 left: 5px;
+	 bottom: 5px;
+	 border-radius: 30px;
+	 background-color: #fff;
+}
+ .switch .slider:before {
+	 transition: 0.4s;
+}
+ .switch .slider:after {
+	 transition: 0.5s;
+}
+ .switch input:checked + .slider {
+	 background-color: transparent;
+}
+ .switch input:checked ~ .wave {
+	 background-color: #3398d9;
+	 display: block;
+	 filter: url(#wave);
+}
+ .switch input:checked + .slider:before {
+	 transform: translateX(30px);
+}
+ .switch input:checked + .slider:after {
+	 transform: translateX(30px);
+}
+ .switch input:checked ~ .boat {
+	 top: -25%;
+	 opacity: 1;
+	 z-index: -1;
+	 animation: boatMovement 3s linear alternate infinite;
+}
+ .switch .boat {
+	 position: absolute;
+	 top: 100%;
+	 left: 5%;
+	 width: 40px;
+	 height: 100px;
+	 transition: 0.6s all cubic-bezier(0.68, -0.6, 0.32, 1.6);
+	 opacity: 0;
+}
+ .switch .boat .bottom {
+	 border-top: 15px solid #d64242;
+	 border-left: 10px solid transparent;
+	 border-right: 10px solid transparent;
+	 height: 0;
+	 width: 54px;
+	 border-radius: 2px;
+}
+ .switch .boat .bottom:after {
+	 content: "";
+	 width: 50px;
+	 border-top: 4px solid #000;
+	 border-left: 3px solid transparent;
+	 border-right: 3px solid transparent;
+	 height: 0;
+	 position: absolute;
+	 top: 3px;
+	 left: 2px;
+	 opacity: 0.2;
+}
+ .switch .boat .mast {
+	 position: absolute;
+	 width: 3px;
+	 height: 17px;
+	 background: #6f4914;
+	 left: 70%;
+	 bottom: 100%;
+}
+ .switch .boat .rectangle-sm {
+	 width: 0;
+	 height: 0;
+	 border-top: 8px solid transparent;
+	 border-left: 10px solid #d6d6d6;
+	 border-right: 10px solid transparent;
+	 border-radius: 0 0 0 0;
+	 position: absolute;
+	 left: 80%;
+	 bottom: 103%;
+}
+.switch .boat .rectangle-lg {
+	 width: 0;
+	 height: 0;
+	 border-top: 13px solid transparent;
+	 border-left: 10px solid transparent;
+	 border-right: 15px solid #d6d6d6;
+	 border-radius: 0 0 0 0;
+	 position: absolute;
+	 left: 5%;
+	 bottom: 103%;
+}
+.c-wave__svg {
+    display: none;
+}
+ @keyframes fishMovement {
+	 60% {
+		 transform: translate(-50%, 50%);
+	}
+	 65% {
+		 transform: translate(50%, 50%);
+	}
+	 100% {
+		 transform: translate(100px, 50%);
+	}
+}
+ @keyframes boatMovement {
+	 30% {
+		 transform: rotate(-5deg);
+	}
+	 60% {
+		 transform: rotate(5deg);
+	}
+	 100% {
+		 transform: rotate(0);
+	}
+}
+ @keyframes twinkling {
+	 30% {
+		 opacity: 0.4;
+	}
+	 60% {
+		 transform: scale(1.2);
+	}
+	 100% {
+		 opacity: 1;
+		 transform: scale(1);
+	}
+}
+ @keyframes rotateSun {
+	 100% {
+		 transform: rotate(360deg);
+	}
+}
+ @keyframes swingCloud {
+	 50% {
+		 transform: translateX(50px);
+	}
+}
+ 
