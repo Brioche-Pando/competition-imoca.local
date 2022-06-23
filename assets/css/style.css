@@ -5,9 +5,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap');
 
 @font-face {
-    font-family: 'Antique Olive Compact';
-    src: url("./font/AntiqueOlive-Compact.woff2") format("woff2"),
-        url("./font/AntiqueOlive-Compact.woff") format("woff");
+    font-family: 'Antique Olive';
+    src: url("./font/AntiqueOlive-Bold.woff2") format("woff2"),
+        url("./font/AntiqueOlive-Bold.woff") format("woff");
 }
 
 :root {
@@ -24,7 +24,7 @@
 
     /* Font family */
     --ff-inter: 'Inter', sans-serif;
-    --ff-olive: 'Antique Olive Compact';
+    --ff-olive: 'Antique Olive';
 
     /* Font size */
     --base-font-size: 8px;
@@ -425,7 +425,7 @@ h1, h2, h3, h4, h5, h6, p, blockquote {
 }
 
 /* ----------------
-     ARTICLES
+     POPUP
 ---------------- */
 
 .c-popup {
@@ -549,9 +549,18 @@ h1, h2, h3, h4, h5, h6, p, blockquote {
      ARTICLE
 ---------------- */
 
-.c-article__img {
+.c-article__img-container {
+    width: 100%;
+    height: 235px;
     margin-bottom: 24px;
     border-radius: 8px;
+    overflow: hidden;
+}
+
+.c-article__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .c-article__title {
@@ -659,6 +668,23 @@ h1, h2, h3, h4, h5, h6, p, blockquote {
 .c-game__img {
     align-self: flex-end;
 }
+
+.c-game__pro-cta {
+    position: relative;
+}
+
+.c-game__pro-cta::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -15px;
+    padding: 3px;
+    display: inline-block;
+    border: solid var(--c-primary);
+    border-width: 0 3px 3px 0;
+    transform: translateY(-50%) rotate(-45deg);
+}
+
 
 /* ----------------
       FOOTER
